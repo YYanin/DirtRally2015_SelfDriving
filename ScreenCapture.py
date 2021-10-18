@@ -13,10 +13,10 @@ def process_img(original_image):
 	processed_img = cv2.Canny(processed_img, threshold1=200, threshold2=300)
 	return processed_img
 
-# #Timer to unpause the game
-# for i in list(range(4))[::-1]:
-# 	print(i+1)
-# 	time.sleep(1)
+#Timer to unpause the game
+for i in list(range(4))[::-1]:
+	print(i+1)
+	time.sleep(1)
 
 
 
@@ -26,12 +26,12 @@ last_time = time.time()
 while(True):
 	screen =  np.array(ImageGrab.grab(bbox=(0,40,1024,768)))
 
-	#Test run for key input
-	print('down')
-	pyautogui.keyDown('w')
-	time.sleep(3)
-	print('up')
-	pyautogui.keyUp('w')
+	# #Test run for key input
+	# print('down')
+	# pyautogui.keyDown('w')
+	# time.sleep(3)
+	# print('up')
+	# pyautogui.keyUp('w')
 
 
 	new_screen = process_img(screen)
@@ -46,8 +46,6 @@ while(True):
 
 	print('Loop took {} seconds' .format(time.time()-last_time))
 	last_time=time.time()
-
-
 
 
 ##############################################################
